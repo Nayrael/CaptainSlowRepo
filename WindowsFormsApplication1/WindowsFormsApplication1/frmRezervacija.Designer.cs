@@ -53,9 +53,7 @@
             this.btnRezerviraj = new System.Windows.Forms.Button();
             this.dateTimeRezervacija = new System.Windows.Forms.DateTimePicker();
             this.txtZaposlenik = new System.Windows.Forms.TextBox();
-            this.lblZaposlenik = new System.Windows.Forms.Label();
-            this.clanoviTableAdapter = new WindowsFormsApplication1.PIDataSetTableAdapters.ClanoviTableAdapter();
-            this.zaposleniciTableAdapter = new WindowsFormsApplication1.PIDataSetTableAdapters.ZaposleniciTableAdapter();
+            this.lblZaposlenik = new System.Windows.Forms.Label(); 
             this.rezervacijeTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.RezervacijeTableAdapter();
             this.stavke_rezervacijeTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.Stavke_rezervacijeTableAdapter();
             this.rezervacijeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -243,6 +241,7 @@
             this.btnRezerviraj.TabIndex = 23;
             this.btnRezerviraj.Text = "Rezerviraj";
             this.btnRezerviraj.UseVisualStyleBackColor = true;
+            this.btnRezerviraj.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnRezerviraj_MouseUp);
             // 
             // dateTimeRezervacija
             // 
@@ -271,12 +270,7 @@
             this.lblZaposlenik.Text = "Zaposlenik:";
             // 
             // clanoviTableAdapter
-            // 
-            this.clanoviTableAdapter.ClearBeforeFill = true;
-            // 
-            // zaposleniciTableAdapter
-            // 
-            this.zaposleniciTableAdapter.ClearBeforeFill = true;
+            //  
             // 
             // rezervacijeTableAdapter
             // 
@@ -417,9 +411,7 @@
         private System.Windows.Forms.ToolStripMenuItem pregledRezervacijaToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dateTimeRezervacija;
         private System.Windows.Forms.TextBox txtZaposlenik;
-        private System.Windows.Forms.Label lblZaposlenik;
-        private PIDataSetTableAdapters.ClanoviTableAdapter clanoviTableAdapter;
-        private PIDataSetTableAdapters.ZaposleniciTableAdapter zaposleniciTableAdapter;
+        private System.Windows.Forms.Label lblZaposlenik; 
         private System.Windows.Forms.BindingSource ZaposleniciBindingSource;
         private PIDataSet1 pIDataSet1;
         private System.Windows.Forms.BindingSource rezervacijeBindingSource;
@@ -432,7 +424,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kolicinaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jedinicnacijenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource rezervacijeBindingSource1;
-        private System.Windows.Forms.DateTimePicker timeTrajanjeOd;
         private System.Windows.Forms.Label lblTrajanjeOd;
         private System.Windows.Forms.DateTimePicker timeTrajanjeDo;
         private System.Windows.Forms.Label lblTrajanjeDo;
@@ -440,5 +431,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource tereniBindingSource;
         private PIDataSet1TableAdapters.TereniTableAdapter tereniTableAdapter;
+        private System.Windows.Forms.DateTimePicker timeTrajanjeOd;
     }
 }
