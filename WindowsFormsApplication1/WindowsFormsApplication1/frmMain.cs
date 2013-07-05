@@ -38,5 +38,13 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void novaRezervacijaToolStripMenuItem_MouseUp(object sender, MouseEventArgs e)
+        {
+            frmRezervacija FrmRezervacija = new frmRezervacija();
+            FrmRezervacija.ShowDialog();
+            
+            
+        }
    }
 }

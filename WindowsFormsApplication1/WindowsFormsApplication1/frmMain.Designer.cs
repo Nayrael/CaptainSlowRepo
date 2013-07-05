@@ -32,19 +32,20 @@
             this.datotekaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.korisnikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.članoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ssStatus = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.datotekaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.korisnikToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pomoćToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.članoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prijavaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.odjavaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.izlazToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.korisnikToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.podaciOKorisnikuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pomoćToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.oAplikacijiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.novaRezervacijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.ssStatus.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -65,6 +66,8 @@
             // 
             // datotekaToolStripMenuItem
             // 
+            this.datotekaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novaRezervacijaToolStripMenuItem});
             this.datotekaToolStripMenuItem.Name = "datotekaToolStripMenuItem";
             this.datotekaToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.datotekaToolStripMenuItem.Text = "Rezervacija";
@@ -79,6 +82,12 @@
             this.pomoćToolStripMenuItem.Name = "pomoćToolStripMenuItem";
             this.pomoćToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.pomoćToolStripMenuItem.Text = "Izvještaji";
+            // 
+            // članoviToolStripMenuItem
+            // 
+            this.članoviToolStripMenuItem.Name = "članoviToolStripMenuItem";
+            this.članoviToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.članoviToolStripMenuItem.Text = "Članovi";
             // 
             // ssStatus
             // 
@@ -95,6 +104,13 @@
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel2.Text = "Status:";
+            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
             // menuStrip2
             // 
@@ -118,6 +134,28 @@
             this.datotekaToolStripMenuItem1.Size = new System.Drawing.Size(66, 20);
             this.datotekaToolStripMenuItem1.Text = "Datoteka";
             // 
+            // prijavaToolStripMenuItem1
+            // 
+            this.prijavaToolStripMenuItem1.Image = global::WindowsFormsApplication1.Properties.Resources.Login_in_icon;
+            this.prijavaToolStripMenuItem1.Name = "prijavaToolStripMenuItem1";
+            this.prijavaToolStripMenuItem1.Size = new System.Drawing.Size(111, 22);
+            this.prijavaToolStripMenuItem1.Text = "Prijava";
+            this.prijavaToolStripMenuItem1.Click += new System.EventHandler(this.prijavaToolStripMenuItem1_Click);
+            // 
+            // odjavaToolStripMenuItem1
+            // 
+            this.odjavaToolStripMenuItem1.Image = global::WindowsFormsApplication1.Properties.Resources.Login_out_icon;
+            this.odjavaToolStripMenuItem1.Name = "odjavaToolStripMenuItem1";
+            this.odjavaToolStripMenuItem1.Size = new System.Drawing.Size(111, 22);
+            this.odjavaToolStripMenuItem1.Text = "Odjava";
+            // 
+            // izlazToolStripMenuItem1
+            // 
+            this.izlazToolStripMenuItem1.Image = global::WindowsFormsApplication1.Properties.Resources.Actions_file_close_icon;
+            this.izlazToolStripMenuItem1.Name = "izlazToolStripMenuItem1";
+            this.izlazToolStripMenuItem1.Size = new System.Drawing.Size(111, 22);
+            this.izlazToolStripMenuItem1.Text = "Izlaz";
+            // 
             // korisnikToolStripMenuItem1
             // 
             this.korisnikToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -125,6 +163,13 @@
             this.korisnikToolStripMenuItem1.Name = "korisnikToolStripMenuItem1";
             this.korisnikToolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
             this.korisnikToolStripMenuItem1.Text = "Korisnik";
+            // 
+            // podaciOKorisnikuToolStripMenuItem
+            // 
+            this.podaciOKorisnikuToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.user__2_;
+            this.podaciOKorisnikuToolStripMenuItem.Name = "podaciOKorisnikuToolStripMenuItem";
+            this.podaciOKorisnikuToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.podaciOKorisnikuToolStripMenuItem.Text = "Podaci o korisniku";
             // 
             // pomoćToolStripMenuItem1
             // 
@@ -134,54 +179,19 @@
             this.pomoćToolStripMenuItem1.Size = new System.Drawing.Size(57, 20);
             this.pomoćToolStripMenuItem1.Text = "Pomoć";
             // 
-            // članoviToolStripMenuItem
-            // 
-            this.članoviToolStripMenuItem.Name = "članoviToolStripMenuItem";
-            this.članoviToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.članoviToolStripMenuItem.Text = "Članovi";
-            // 
-            // prijavaToolStripMenuItem1
-            // 
-            this.prijavaToolStripMenuItem1.Image = global::WindowsFormsApplication1.Properties.Resources.Login_in_icon;
-            this.prijavaToolStripMenuItem1.Name = "prijavaToolStripMenuItem1";
-            this.prijavaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.prijavaToolStripMenuItem1.Text = "Prijava";
-            this.prijavaToolStripMenuItem1.Click += new System.EventHandler(this.prijavaToolStripMenuItem1_Click);
-            // 
-            // odjavaToolStripMenuItem1
-            // 
-            this.odjavaToolStripMenuItem1.Image = global::WindowsFormsApplication1.Properties.Resources.Login_out_icon;
-            this.odjavaToolStripMenuItem1.Name = "odjavaToolStripMenuItem1";
-            this.odjavaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.odjavaToolStripMenuItem1.Text = "Odjava";
-            // 
-            // izlazToolStripMenuItem1
-            // 
-            this.izlazToolStripMenuItem1.Image = global::WindowsFormsApplication1.Properties.Resources.Actions_file_close_icon;
-            this.izlazToolStripMenuItem1.Name = "izlazToolStripMenuItem1";
-            this.izlazToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.izlazToolStripMenuItem1.Text = "Izlaz";
-            // 
-            // podaciOKorisnikuToolStripMenuItem
-            // 
-            this.podaciOKorisnikuToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.user__2_;
-            this.podaciOKorisnikuToolStripMenuItem.Name = "podaciOKorisnikuToolStripMenuItem";
-            this.podaciOKorisnikuToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.podaciOKorisnikuToolStripMenuItem.Text = "Podaci o korisniku";
-            // 
             // oAplikacijiToolStripMenuItem
             // 
             this.oAplikacijiToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.imeem;
             this.oAplikacijiToolStripMenuItem.Name = "oAplikacijiToolStripMenuItem";
-            this.oAplikacijiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.oAplikacijiToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.oAplikacijiToolStripMenuItem.Text = "O aplikaciji";
             // 
-            // toolStripStatusLabel2
+            // novaRezervacijaToolStripMenuItem
             // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(42, 17);
-            this.toolStripStatusLabel2.Text = "Status:";
-            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
+            this.novaRezervacijaToolStripMenuItem.Name = "novaRezervacijaToolStripMenuItem";
+            this.novaRezervacijaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.novaRezervacijaToolStripMenuItem.Text = "Nova Rezervacija";
+            this.novaRezervacijaToolStripMenuItem.MouseUp += new System.Windows.Forms.MouseEventHandler(this.novaRezervacijaToolStripMenuItem_MouseUp);
             // 
             // frmMain
             // 
@@ -227,6 +237,7 @@
         private System.Windows.Forms.ToolStripMenuItem oAplikacijiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem članoviToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripMenuItem novaRezervacijaToolStripMenuItem;
     }
 }
 

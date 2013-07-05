@@ -75,6 +75,20 @@
     <Compile Include="frmRezervacija.Designer.cs">
       <DependentUpon>frmRezervacija.cs</DependentUpon>
     </Compile>
+    <Compile Include="PIDataSet.cs">
+      <DependentUpon>PIDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PIDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PIDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PIDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PIDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmClanovi.resx">
@@ -102,6 +116,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="PIDataSet.xsc">
+      <DependentUpon>PIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PIDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PIDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PIDataSet.xss">
+      <DependentUpon>PIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PIDataSet1.xsc">
+      <DependentUpon>PIDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PIDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PIDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PIDataSet1.xss">
+      <DependentUpon>PIDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
