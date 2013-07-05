@@ -34,6 +34,9 @@
             this.txtLozinka = new System.Windows.Forms.TextBox();
             this.btnPrijava = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
+            this.zaposleniciTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.ZaposleniciTableAdapter();
+            this.pIDataSet1 = new WindowsFormsApplication1.PIDataSet1();
+            ((System.ComponentModel.ISupportInitialize)(this.pIDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblKorisnickoIme
@@ -65,6 +68,7 @@
             // 
             this.txtLozinka.Location = new System.Drawing.Point(236, 68);
             this.txtLozinka.Name = "txtLozinka";
+            this.txtLozinka.PasswordChar = '*';
             this.txtLozinka.Size = new System.Drawing.Size(128, 20);
             this.txtLozinka.TabIndex = 3;
             // 
@@ -76,6 +80,7 @@
             this.btnPrijava.TabIndex = 4;
             this.btnPrijava.Text = "Prijava";
             this.btnPrijava.UseVisualStyleBackColor = true;
+            this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
             // 
             // btnOdustani
             // 
@@ -85,6 +90,16 @@
             this.btnOdustani.TabIndex = 5;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
+            // 
+            // zaposleniciTableAdapter
+            // 
+            this.zaposleniciTableAdapter.ClearBeforeFill = true;
+            // 
+            // pIDataSet1
+            // 
+            this.pIDataSet1.DataSetName = "PIDataSet1";
+            this.pIDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // frmPrijava
             // 
@@ -105,6 +120,7 @@
             this.Name = "frmPrijava";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
+            ((System.ComponentModel.ISupportInitialize)(this.pIDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +134,7 @@
         private System.Windows.Forms.TextBox txtLozinka;
         private System.Windows.Forms.Button btnPrijava;
         private System.Windows.Forms.Button btnOdustani;
+        private PIDataSet1TableAdapters.ZaposleniciTableAdapter zaposleniciTableAdapter;
+        private PIDataSet1 pIDataSet1;
     }
 }

@@ -14,3 +14,19 @@ C:\Users\Ankomorcec\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\Wi
 C:\Users\Ankomorcec\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmRezervacija.resources
 C:\Users\Ankomorcec\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Ankomorcec\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Rezervacija sportskih terena.csproj.GenerateResource.Cache
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Rezervacija sportskih terena.csprojResolveAssemblyReference.cache
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmClanovi.resources
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmIzvjestaji.resources
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmMain.resources
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmPrijava.resources
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmRezervacija.resources
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Rezervacija sportskih terena.csproj.GenerateResource.Cache
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmZaposlenici.resources
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\RdlCompile.cache
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\RdlCompile.compiled

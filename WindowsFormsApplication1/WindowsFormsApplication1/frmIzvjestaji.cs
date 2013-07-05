@@ -17,9 +17,29 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void pregledIzvještajaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void frmIzvjestaji_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'PIDataSet1.Usluge' table. You can move, or remove it, as needed.
+            this.UslugeTableAdapter.Fill(this.PIDataSet1.Usluge);
+            // TODO: This line of code loads data into the 'PIDataSet1.Tereni' table. You can move, or remove it, as needed.
+            this.TereniTableAdapter.Fill(this.PIDataSet1.Tereni);
+            // TODO: This line of code loads data into the 'PIDataSet1.Rezervacije' table. You can move, or remove it, as needed.
+            this.RezervacijeTableAdapter.Fill(this.PIDataSet1.Rezervacije);
+            // TODO: This line of code loads data into the 'PIDataSet1.Zaposlenici' table. You can move, or remove it, as needed.
+            this.ZaposleniciTableAdapter.Fill(this.PIDataSet1.Zaposlenici);
+            // TODO: This line of code loads data into the 'PIDataSet1.Clanovi' table. You can move, or remove it, as needed.
+            this.ClanoviTableAdapter.Fill(this.PIDataSet1.Clanovi);
 
+            this.reportViewer1.RefreshReport();
+
+            this.reportViewer2.RefreshReport();
+            this.reportViewer2.RefreshReport();
+            this.reportViewer3.RefreshReport();
+            this.reportViewer3.RefreshReport();
+            this.reportViewer4.RefreshReport();
+            this.reportViewer5.RefreshReport();
+            this.reportViewer6.RefreshReport();
         }
+
     }
 }

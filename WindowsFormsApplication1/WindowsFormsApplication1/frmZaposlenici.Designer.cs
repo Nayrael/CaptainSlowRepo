@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmClanovi
+    partial class frmZaposlenici
     {
         /// <summary>
         /// Required designer variable.
@@ -29,25 +29,33 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClanovi));
-            this.clanoviBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.pIDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pIDataSet1 = new WindowsFormsApplication1.PIDataSet1();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmZaposlenici));
             this.gbRegistracija = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.zaposleniciBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pIDataSet1 = new WindowsFormsApplication1.PIDataSet1();
+            this.lblAktivan = new System.Windows.Forms.Label();
+            this.txtOib = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lblprezime = new System.Windows.Forms.Label();
+            this.lblime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.dateClanarina = new System.Windows.Forms.DateTimePicker();
             this.btnRegistriraj = new System.Windows.Forms.Button();
-            this.dateAktivan = new System.Windows.Forms.DateTimePicker();
             this.txtPrezime = new System.Windows.Forms.TextBox();
             this.txtIme = new System.Windows.Forms.TextBox();
-            this.lblSpolR = new System.Windows.Forms.Label();
-            this.lblDatumRodenjaR = new System.Windows.Forms.Label();
-            this.lblKontaktR = new System.Windows.Forms.Label();
             this.lblPrezimeR = new System.Windows.Forms.Label();
             this.lblImeR = new System.Windows.Forms.Label();
-            this.clanoviBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clanoviTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.ClanoviTableAdapter();
+            this.dgvZaposlenici = new System.Windows.Forms.DataGridView();
+            this.idzaposlenikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aktivanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oIBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -60,15 +68,9 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.clanoviBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.dgvClanovi = new System.Windows.Forms.DataGridView();
-            this.idclanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aktivanodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clanarinaplacenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clanarinaplacenadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvRezervacija = new System.Windows.Forms.DataGridView();
+            this.zaposleniciTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.ZaposleniciTableAdapter();
+            this.clanoviTableAdapter1 = new WindowsFormsApplication1.PIDataSet1TableAdapters.ClanoviTableAdapter();
+            this.dgvRezervacije = new System.Windows.Forms.DataGridView();
             this.idrezervacijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zaposlenikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,65 +80,133 @@
             this.trajanjeodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trajanjedoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.terenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fkRezervacijeClanovi1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fkRezervacijeZaposlenici1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pIDataSet11 = new WindowsFormsApplication1.PIDataSet1();
             this.rezervacijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rezervacijeTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.RezervacijeTableAdapter();
-            this.chkclanarina = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.clanoviBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pIDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pIDataSet1)).BeginInit();
             this.gbRegistracija.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clanoviBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposleniciBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pIDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clanoviBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClanovi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRezervacija)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fkRezervacijeClanovi1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRezervacije)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fkRezervacijeZaposlenici1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pIDataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // clanoviBindingSource1
+            // gbRegistracija
             // 
-            this.clanoviBindingSource1.DataMember = "Clanovi";
-            this.clanoviBindingSource1.DataSource = this.pIDataSet1BindingSource;
+            this.gbRegistracija.Controls.Add(this.checkBox1);
+            this.gbRegistracija.Controls.Add(this.lblAktivan);
+            this.gbRegistracija.Controls.Add(this.txtOib);
+            this.gbRegistracija.Controls.Add(this.label2);
+            this.gbRegistracija.Controls.Add(this.txtPass);
+            this.gbRegistracija.Controls.Add(this.txtUsername);
+            this.gbRegistracija.Controls.Add(this.lblprezime);
+            this.gbRegistracija.Controls.Add(this.lblime);
+            this.gbRegistracija.Controls.Add(this.label1);
+            this.gbRegistracija.Controls.Add(this.txtID);
+            this.gbRegistracija.Controls.Add(this.btnRegistriraj);
+            this.gbRegistracija.Controls.Add(this.txtPrezime);
+            this.gbRegistracija.Controls.Add(this.txtIme);
+            this.gbRegistracija.Controls.Add(this.lblPrezimeR);
+            this.gbRegistracija.Controls.Add(this.lblImeR);
+            this.gbRegistracija.Location = new System.Drawing.Point(12, 41);
+            this.gbRegistracija.Name = "gbRegistracija";
+            this.gbRegistracija.Size = new System.Drawing.Size(253, 284);
+            this.gbRegistracija.TabIndex = 10;
+            this.gbRegistracija.TabStop = false;
+            this.gbRegistracija.Text = "Podaci:";
             // 
-            // pIDataSet1BindingSource
+            // checkBox1
             // 
-            this.pIDataSet1BindingSource.DataSource = this.pIDataSet1;
-            this.pIDataSet1BindingSource.Position = 0;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.zaposleniciBindingSource, "aktivan", true));
+            this.checkBox1.Location = new System.Drawing.Point(103, 159);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(40, 17);
+            this.checkBox1.TabIndex = 29;
+            this.checkBox1.Text = "Da";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // zaposleniciBindingSource
+            // 
+            this.zaposleniciBindingSource.DataMember = "Zaposlenici";
+            this.zaposleniciBindingSource.DataSource = this.pIDataSet1;
             // 
             // pIDataSet1
             // 
             this.pIDataSet1.DataSetName = "PIDataSet1";
             this.pIDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // gbRegistracija
+            // lblAktivan
             // 
-            this.gbRegistracija.Controls.Add(this.chkclanarina);
-            this.gbRegistracija.Controls.Add(this.label1);
-            this.gbRegistracija.Controls.Add(this.txtID);
-            this.gbRegistracija.Controls.Add(this.dateClanarina);
-            this.gbRegistracija.Controls.Add(this.btnRegistriraj);
-            this.gbRegistracija.Controls.Add(this.dateAktivan);
-            this.gbRegistracija.Controls.Add(this.txtPrezime);
-            this.gbRegistracija.Controls.Add(this.txtIme);
-            this.gbRegistracija.Controls.Add(this.lblSpolR);
-            this.gbRegistracija.Controls.Add(this.lblDatumRodenjaR);
-            this.gbRegistracija.Controls.Add(this.lblKontaktR);
-            this.gbRegistracija.Controls.Add(this.lblPrezimeR);
-            this.gbRegistracija.Controls.Add(this.lblImeR);
-            this.gbRegistracija.Location = new System.Drawing.Point(12, 31);
-            this.gbRegistracija.Name = "gbRegistracija";
-            this.gbRegistracija.Size = new System.Drawing.Size(305, 276);
-            this.gbRegistracija.TabIndex = 9;
-            this.gbRegistracija.TabStop = false;
-            this.gbRegistracija.Text = "Podaci:";
+            this.lblAktivan.AutoSize = true;
+            this.lblAktivan.Location = new System.Drawing.Point(35, 164);
+            this.lblAktivan.Name = "lblAktivan";
+            this.lblAktivan.Size = new System.Drawing.Size(46, 13);
+            this.lblAktivan.TabIndex = 28;
+            this.lblAktivan.Text = "Aktivan:";
+            // 
+            // txtOib
+            // 
+            this.txtOib.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.txtOib.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposleniciBindingSource, "OIB", true));
+            this.txtOib.Location = new System.Drawing.Point(103, 187);
+            this.txtOib.MaxLength = 11;
+            this.txtOib.Name = "txtOib";
+            this.txtOib.Size = new System.Drawing.Size(134, 20);
+            this.txtOib.TabIndex = 27;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(54, 194);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "OIB:";
+            // 
+            // txtPass
+            // 
+            this.txtPass.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposleniciBindingSource, "password", true));
+            this.txtPass.Location = new System.Drawing.Point(103, 132);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(134, 20);
+            this.txtPass.TabIndex = 25;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposleniciBindingSource, "username", true));
+            this.txtUsername.Location = new System.Drawing.Point(103, 104);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(134, 20);
+            this.txtUsername.TabIndex = 24;
+            // 
+            // lblprezime
+            // 
+            this.lblprezime.AutoSize = true;
+            this.lblprezime.Location = new System.Drawing.Point(35, 139);
+            this.lblprezime.Name = "lblprezime";
+            this.lblprezime.Size = new System.Drawing.Size(47, 13);
+            this.lblprezime.TabIndex = 23;
+            this.lblprezime.Text = "Lozinka:";
+            // 
+            // lblime
+            // 
+            this.lblime.AutoSize = true;
+            this.lblime.Location = new System.Drawing.Point(13, 108);
+            this.lblime.Name = "lblime";
+            this.lblime.Size = new System.Drawing.Size(78, 13);
+            this.lblime.TabIndex = 22;
+            this.lblime.Text = "Korisničko ime:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 26);
+            this.label1.Location = new System.Drawing.Point(64, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 21;
@@ -144,24 +214,16 @@
             // 
             // txtID
             // 
-            this.txtID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clanoviBindingSource1, "id_clan", true));
-            this.txtID.Location = new System.Drawing.Point(105, 19);
+            this.txtID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposleniciBindingSource, "id_zaposlenik", true));
+            this.txtID.Location = new System.Drawing.Point(103, 17);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(100, 20);
             this.txtID.TabIndex = 20;
             // 
-            // dateClanarina
-            // 
-            this.dateClanarina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clanoviBindingSource1, "clanarina_placena_do", true));
-            this.dateClanarina.Location = new System.Drawing.Point(45, 208);
-            this.dateClanarina.Name = "dateClanarina";
-            this.dateClanarina.Size = new System.Drawing.Size(200, 20);
-            this.dateClanarina.TabIndex = 19;
-            // 
             // btnRegistriraj
             // 
-            this.btnRegistriraj.Location = new System.Drawing.Point(160, 234);
+            this.btnRegistriraj.Location = new System.Drawing.Point(82, 246);
             this.btnRegistriraj.Name = "btnRegistriraj";
             this.btnRegistriraj.Size = new System.Drawing.Size(85, 31);
             this.btnRegistriraj.TabIndex = 18;
@@ -169,61 +231,26 @@
             this.btnRegistriraj.UseVisualStyleBackColor = true;
             this.btnRegistriraj.Click += new System.EventHandler(this.btnRegistriraj_Click);
             // 
-            // dateAktivan
-            // 
-            this.dateAktivan.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clanoviBindingSource1, "aktivan_od", true));
-            this.dateAktivan.Location = new System.Drawing.Point(105, 104);
-            this.dateAktivan.Name = "dateAktivan";
-            this.dateAktivan.Size = new System.Drawing.Size(130, 20);
-            this.dateAktivan.TabIndex = 15;
-            // 
             // txtPrezime
             // 
-            this.txtPrezime.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clanoviBindingSource1, "prezime", true));
-            this.txtPrezime.Location = new System.Drawing.Point(105, 75);
+            this.txtPrezime.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposleniciBindingSource, "prezime", true));
+            this.txtPrezime.Location = new System.Drawing.Point(103, 77);
             this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(100, 20);
+            this.txtPrezime.Size = new System.Drawing.Size(134, 20);
             this.txtPrezime.TabIndex = 14;
             // 
             // txtIme
             // 
-            this.txtIme.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clanoviBindingSource1, "ime", true));
-            this.txtIme.Location = new System.Drawing.Point(105, 49);
+            this.txtIme.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.zaposleniciBindingSource, "ime", true));
+            this.txtIme.Location = new System.Drawing.Point(103, 48);
             this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(100, 20);
+            this.txtIme.Size = new System.Drawing.Size(134, 20);
             this.txtIme.TabIndex = 9;
-            // 
-            // lblSpolR
-            // 
-            this.lblSpolR.AutoSize = true;
-            this.lblSpolR.Location = new System.Drawing.Point(6, 135);
-            this.lblSpolR.Name = "lblSpolR";
-            this.lblSpolR.Size = new System.Drawing.Size(95, 13);
-            this.lblSpolR.TabIndex = 5;
-            this.lblSpolR.Text = "Članarina plaćena:";
-            // 
-            // lblDatumRodenjaR
-            // 
-            this.lblDatumRodenjaR.AutoSize = true;
-            this.lblDatumRodenjaR.Location = new System.Drawing.Point(28, 104);
-            this.lblDatumRodenjaR.Name = "lblDatumRodenjaR";
-            this.lblDatumRodenjaR.Size = new System.Drawing.Size(61, 13);
-            this.lblDatumRodenjaR.TabIndex = 4;
-            this.lblDatumRodenjaR.Text = "Aktivan od:";
-            // 
-            // lblKontaktR
-            // 
-            this.lblKontaktR.AutoSize = true;
-            this.lblKontaktR.Location = new System.Drawing.Point(6, 169);
-            this.lblKontaktR.Name = "lblKontaktR";
-            this.lblKontaktR.Size = new System.Drawing.Size(110, 13);
-            this.lblKontaktR.TabIndex = 2;
-            this.lblKontaktR.Text = "Članarina plaćena do:";
             // 
             // lblPrezimeR
             // 
             this.lblPrezimeR.AutoSize = true;
-            this.lblPrezimeR.Location = new System.Drawing.Point(42, 78);
+            this.lblPrezimeR.Location = new System.Drawing.Point(44, 81);
             this.lblPrezimeR.Name = "lblPrezimeR";
             this.lblPrezimeR.Size = new System.Drawing.Size(47, 13);
             this.lblPrezimeR.TabIndex = 1;
@@ -232,25 +259,76 @@
             // lblImeR
             // 
             this.lblImeR.AutoSize = true;
-            this.lblImeR.Location = new System.Drawing.Point(62, 56);
+            this.lblImeR.Location = new System.Drawing.Point(64, 55);
             this.lblImeR.Name = "lblImeR";
             this.lblImeR.Size = new System.Drawing.Size(27, 13);
             this.lblImeR.TabIndex = 0;
             this.lblImeR.Text = "Ime:";
             // 
-            // clanoviBindingSource
+            // dgvZaposlenici
             // 
-            this.clanoviBindingSource.DataMember = "Clanovi";
-            this.clanoviBindingSource.DataSource = this.pIDataSet1BindingSource;
+            this.dgvZaposlenici.AutoGenerateColumns = false;
+            this.dgvZaposlenici.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvZaposlenici.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idzaposlenikDataGridViewTextBoxColumn,
+            this.imeDataGridViewTextBoxColumn,
+            this.prezimeDataGridViewTextBoxColumn,
+            this.usernameDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.aktivanDataGridViewTextBoxColumn,
+            this.oIBDataGridViewTextBoxColumn});
+            this.dgvZaposlenici.DataSource = this.zaposleniciBindingSource;
+            this.dgvZaposlenici.Location = new System.Drawing.Point(271, 41);
+            this.dgvZaposlenici.Name = "dgvZaposlenici";
+            this.dgvZaposlenici.Size = new System.Drawing.Size(765, 284);
+            this.dgvZaposlenici.TabIndex = 11;
             // 
-            // clanoviTableAdapter
+            // idzaposlenikDataGridViewTextBoxColumn
             // 
-            this.clanoviTableAdapter.ClearBeforeFill = true;
+            this.idzaposlenikDataGridViewTextBoxColumn.DataPropertyName = "id_zaposlenik";
+            this.idzaposlenikDataGridViewTextBoxColumn.HeaderText = "id_zaposlenik";
+            this.idzaposlenikDataGridViewTextBoxColumn.Name = "idzaposlenikDataGridViewTextBoxColumn";
+            // 
+            // imeDataGridViewTextBoxColumn
+            // 
+            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
+            this.imeDataGridViewTextBoxColumn.HeaderText = "ime";
+            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
+            // 
+            // prezimeDataGridViewTextBoxColumn
+            // 
+            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.HeaderText = "prezime";
+            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // aktivanDataGridViewTextBoxColumn
+            // 
+            this.aktivanDataGridViewTextBoxColumn.DataPropertyName = "aktivan";
+            this.aktivanDataGridViewTextBoxColumn.HeaderText = "aktivan";
+            this.aktivanDataGridViewTextBoxColumn.Name = "aktivanDataGridViewTextBoxColumn";
+            // 
+            // oIBDataGridViewTextBoxColumn
+            // 
+            this.oIBDataGridViewTextBoxColumn.DataPropertyName = "OIB";
+            this.oIBDataGridViewTextBoxColumn.HeaderText = "OIB";
+            this.oIBDataGridViewTextBoxColumn.Name = "oIBDataGridViewTextBoxColumn";
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.clanoviBindingSource1;
+            this.bindingNavigator1.BindingSource = this.zaposleniciBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -272,8 +350,8 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(991, 25);
-            this.bindingNavigator1.TabIndex = 10;
+            this.bindingNavigator1.Size = new System.Drawing.Size(1046, 25);
+            this.bindingNavigator1.TabIndex = 12;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
@@ -361,69 +439,19 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // clanoviBindingSource2
+            // zaposleniciTableAdapter
             // 
-            this.clanoviBindingSource2.DataMember = "Clanovi";
-            this.clanoviBindingSource2.DataSource = this.pIDataSet1;
+            this.zaposleniciTableAdapter.ClearBeforeFill = true;
             // 
-            // dgvClanovi
+            // clanoviTableAdapter1
             // 
-            this.dgvClanovi.AutoGenerateColumns = false;
-            this.dgvClanovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClanovi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idclanDataGridViewTextBoxColumn,
-            this.imeDataGridViewTextBoxColumn,
-            this.prezimeDataGridViewTextBoxColumn,
-            this.aktivanodDataGridViewTextBoxColumn,
-            this.clanarinaplacenaDataGridViewTextBoxColumn,
-            this.clanarinaplacenadoDataGridViewTextBoxColumn});
-            this.dgvClanovi.DataSource = this.clanoviBindingSource1;
-            this.dgvClanovi.Location = new System.Drawing.Point(335, 40);
-            this.dgvClanovi.Name = "dgvClanovi";
-            this.dgvClanovi.Size = new System.Drawing.Size(644, 256);
-            this.dgvClanovi.TabIndex = 11;
+            this.clanoviTableAdapter1.ClearBeforeFill = true;
             // 
-            // idclanDataGridViewTextBoxColumn
+            // dgvRezervacije
             // 
-            this.idclanDataGridViewTextBoxColumn.DataPropertyName = "id_clan";
-            this.idclanDataGridViewTextBoxColumn.HeaderText = "id_clan";
-            this.idclanDataGridViewTextBoxColumn.Name = "idclanDataGridViewTextBoxColumn";
-            // 
-            // imeDataGridViewTextBoxColumn
-            // 
-            this.imeDataGridViewTextBoxColumn.DataPropertyName = "ime";
-            this.imeDataGridViewTextBoxColumn.HeaderText = "ime";
-            this.imeDataGridViewTextBoxColumn.Name = "imeDataGridViewTextBoxColumn";
-            // 
-            // prezimeDataGridViewTextBoxColumn
-            // 
-            this.prezimeDataGridViewTextBoxColumn.DataPropertyName = "prezime";
-            this.prezimeDataGridViewTextBoxColumn.HeaderText = "prezime";
-            this.prezimeDataGridViewTextBoxColumn.Name = "prezimeDataGridViewTextBoxColumn";
-            // 
-            // aktivanodDataGridViewTextBoxColumn
-            // 
-            this.aktivanodDataGridViewTextBoxColumn.DataPropertyName = "aktivan_od";
-            this.aktivanodDataGridViewTextBoxColumn.HeaderText = "aktivan_od";
-            this.aktivanodDataGridViewTextBoxColumn.Name = "aktivanodDataGridViewTextBoxColumn";
-            // 
-            // clanarinaplacenaDataGridViewTextBoxColumn
-            // 
-            this.clanarinaplacenaDataGridViewTextBoxColumn.DataPropertyName = "clanarina_placena";
-            this.clanarinaplacenaDataGridViewTextBoxColumn.HeaderText = "clanarina_placena";
-            this.clanarinaplacenaDataGridViewTextBoxColumn.Name = "clanarinaplacenaDataGridViewTextBoxColumn";
-            // 
-            // clanarinaplacenadoDataGridViewTextBoxColumn
-            // 
-            this.clanarinaplacenadoDataGridViewTextBoxColumn.DataPropertyName = "clanarina_placena_do";
-            this.clanarinaplacenadoDataGridViewTextBoxColumn.HeaderText = "clanarina_placena_do";
-            this.clanarinaplacenadoDataGridViewTextBoxColumn.Name = "clanarinaplacenadoDataGridViewTextBoxColumn";
-            // 
-            // dgvRezervacija
-            // 
-            this.dgvRezervacija.AutoGenerateColumns = false;
-            this.dgvRezervacija.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRezervacija.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvRezervacije.AutoGenerateColumns = false;
+            this.dgvRezervacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRezervacije.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idrezervacijaDataGridViewTextBoxColumn,
             this.zaposlenikDataGridViewTextBoxColumn,
             this.clanDataGridViewTextBoxColumn,
@@ -433,11 +461,11 @@
             this.trajanjeodDataGridViewTextBoxColumn,
             this.trajanjedoDataGridViewTextBoxColumn,
             this.terenDataGridViewTextBoxColumn});
-            this.dgvRezervacija.DataSource = this.fkRezervacijeClanovi1BindingSource;
-            this.dgvRezervacija.Location = new System.Drawing.Point(21, 313);
-            this.dgvRezervacija.Name = "dgvRezervacija";
-            this.dgvRezervacija.Size = new System.Drawing.Size(958, 167);
-            this.dgvRezervacija.TabIndex = 12;
+            this.dgvRezervacije.DataSource = this.fkRezervacijeZaposlenici1BindingSource;
+            this.dgvRezervacije.Location = new System.Drawing.Point(12, 331);
+            this.dgvRezervacije.Name = "dgvRezervacije";
+            this.dgvRezervacije.Size = new System.Drawing.Size(1024, 224);
+            this.dgvRezervacije.TabIndex = 13;
             // 
             // idrezervacijaDataGridViewTextBoxColumn
             // 
@@ -493,56 +521,48 @@
             this.terenDataGridViewTextBoxColumn.HeaderText = "teren";
             this.terenDataGridViewTextBoxColumn.Name = "terenDataGridViewTextBoxColumn";
             // 
-            // fkRezervacijeClanovi1BindingSource
+            // fkRezervacijeZaposlenici1BindingSource
             // 
-            this.fkRezervacijeClanovi1BindingSource.DataMember = "fk_Rezervacije_Clanovi1";
-            this.fkRezervacijeClanovi1BindingSource.DataSource = this.clanoviBindingSource1;
+            this.fkRezervacijeZaposlenici1BindingSource.DataMember = "fk_Rezervacije_Zaposlenici1";
+            this.fkRezervacijeZaposlenici1BindingSource.DataSource = this.zaposleniciBindingSource;
+            // 
+            // pIDataSet11
+            // 
+            this.pIDataSet11.DataSetName = "PIDataSet1";
+            this.pIDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rezervacijeBindingSource
             // 
             this.rezervacijeBindingSource.DataMember = "Rezervacije";
-            this.rezervacijeBindingSource.DataSource = this.pIDataSet1BindingSource;
+            this.rezervacijeBindingSource.DataSource = this.pIDataSet11;
             // 
             // rezervacijeTableAdapter
             // 
             this.rezervacijeTableAdapter.ClearBeforeFill = true;
             // 
-            // chkclanarina
-            // 
-            this.chkclanarina.AutoSize = true;
-            this.chkclanarina.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.clanoviBindingSource1, "clanarina_placena", true));
-            this.chkclanarina.Location = new System.Drawing.Point(107, 135);
-            this.chkclanarina.Name = "chkclanarina";
-            this.chkclanarina.Size = new System.Drawing.Size(40, 17);
-            this.chkclanarina.TabIndex = 22;
-            this.chkclanarina.Text = "Da";
-            this.chkclanarina.UseVisualStyleBackColor = true;
-            // 
-            // frmClanovi
+            // frmZaposlenici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 490);
-            this.Controls.Add(this.dgvRezervacija);
-            this.Controls.Add(this.dgvClanovi);
+            this.ClientSize = new System.Drawing.Size(1046, 564);
+            this.Controls.Add(this.dgvRezervacije);
             this.Controls.Add(this.bindingNavigator1);
+            this.Controls.Add(this.dgvZaposlenici);
             this.Controls.Add(this.gbRegistracija);
-            this.Name = "frmClanovi";
-            this.Text = "Članovi";
-            this.Load += new System.EventHandler(this.frmClanovi_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.clanoviBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pIDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pIDataSet1)).EndInit();
+            this.Name = "frmZaposlenici";
+            this.Text = "Zaposlenici";
+            this.Load += new System.EventHandler(this.frmZaposlenici_Load);
             this.gbRegistracija.ResumeLayout(false);
             this.gbRegistracija.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clanoviBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposleniciBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pIDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clanoviBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClanovi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRezervacija)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fkRezervacijeClanovi1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRezervacije)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fkRezervacijeZaposlenici1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pIDataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -552,21 +572,32 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbRegistracija;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnRegistriraj;
-        private System.Windows.Forms.DateTimePicker dateAktivan;
         private System.Windows.Forms.TextBox txtPrezime;
         private System.Windows.Forms.TextBox txtIme;
-        private System.Windows.Forms.Label lblSpolR;
-        private System.Windows.Forms.Label lblDatumRodenjaR;
-        private System.Windows.Forms.Label lblKontaktR;
         private System.Windows.Forms.Label lblPrezimeR;
         private System.Windows.Forms.Label lblImeR;
-        private System.Windows.Forms.DateTimePicker dateClanarina;
-        private System.Windows.Forms.BindingSource pIDataSet1BindingSource;
+        private System.Windows.Forms.DataGridView dgvZaposlenici;
         private PIDataSet1 pIDataSet1;
-        private System.Windows.Forms.BindingSource clanoviBindingSource;
-        private PIDataSet1TableAdapters.ClanoviTableAdapter clanoviTableAdapter;
-        private System.Windows.Forms.BindingSource clanoviBindingSource1;
+        private System.Windows.Forms.BindingSource zaposleniciBindingSource;
+        private PIDataSet1TableAdapters.ZaposleniciTableAdapter zaposleniciTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idzaposlenikDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aktivanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn oIBDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label lblprezime;
+        private System.Windows.Forms.Label lblime;
+        private PIDataSet1TableAdapters.ClanoviTableAdapter clanoviTableAdapter1;
+        private System.Windows.Forms.TextBox txtOib;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblAktivan;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -579,17 +610,8 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.BindingSource clanoviBindingSource2;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvClanovi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idclanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aktivanodDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clanarinaplacenaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clanarinaplacenadoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView dgvRezervacija;
+        private System.Windows.Forms.DataGridView dgvRezervacije;
+        private PIDataSet1 pIDataSet11;
         private System.Windows.Forms.BindingSource rezervacijeBindingSource;
         private PIDataSet1TableAdapters.RezervacijeTableAdapter rezervacijeTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idrezervacijaDataGridViewTextBoxColumn;
@@ -601,7 +623,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn trajanjeodDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trajanjedoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn terenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource fkRezervacijeClanovi1BindingSource;
-        private System.Windows.Forms.CheckBox chkclanarina;
+        private System.Windows.Forms.BindingSource fkRezervacijeZaposlenici1BindingSource;
+        private System.Windows.Forms.CheckBox checkBox1;
+
     }
 }

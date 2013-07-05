@@ -12,6 +12,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmMain : Form
     {
+        public static PIDataSet1.ZaposleniciRow LogiraniKorisnik;
+        public static ToolStripStatusLabel statusna_traka;
         public frmMain()
         {
             InitializeComponent();
@@ -19,14 +21,15 @@ namespace WindowsFormsApplication1
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            statusna_traka = toolStripStatusLabel3;
             openLogin();
         }
 
         private void openLogin()
         {
             frmPrijava FrmPrijava = new frmPrijava();
-            FrmPrijava.MdiParent = this;
-            FrmPrijava.Show();
+            FrmPrijava.ShowDialog(this);
+    
         }
 
         private void prijavaToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -42,9 +45,35 @@ namespace WindowsFormsApplication1
         private void novaRezervacijaToolStripMenuItem_MouseUp(object sender, MouseEventArgs e)
         {
             frmRezervacija FrmRezervacija = new frmRezervacija();
-            FrmRezervacija.ShowDialog();
+            FrmRezervacija.MdiParent = this;
+            FrmRezervacija.Show();
             
             
+        }
+
+        private void članoviToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClanovi clanovi = new frmClanovi();
+            clanovi.MdiParent = this;
+            clanovi.Show();
+        }
+
+        private void zaposleniciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmZaposlenici zaposlenici = new frmZaposlenici();
+            zaposlenici.MdiParent = this;
+            zaposlenici.Show();
+        }
+        public static void status(string text, int duration, int priority)
+        {
+            statusna_traka.Text = text;
+        }
+
+        private void pomoćToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIzvjestaji izvjestaji = new frmIzvjestaji();
+            izvjestaji.MdiParent = this;
+            izvjestaji.Show();
         }
    }
 }

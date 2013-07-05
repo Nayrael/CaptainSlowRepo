@@ -47,6 +47,12 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void članoviToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClanovi clanovi = new frmClanovi();
+            clanovi.Show();
+        }
+
  
 
        

@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tereniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.članoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.slobodniTerminiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pregledRezervacijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idstavkeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idrezervacijeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +48,7 @@
             this.btnRezerviraj = new System.Windows.Forms.Button();
             this.dateTimeRezervacija = new System.Windows.Forms.DateTimePicker();
             this.txtZaposlenik = new System.Windows.Forms.TextBox();
-            this.lblZaposlenik = new System.Windows.Forms.Label(); 
+            this.lblZaposlenik = new System.Windows.Forms.Label();
             this.rezervacijeTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.RezervacijeTableAdapter();
             this.stavke_rezervacijeTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.Stavke_rezervacijeTableAdapter();
             this.rezervacijeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -66,7 +61,6 @@
             this.tereniBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ZaposleniciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tereniTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.TereniTableAdapter();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKStavkerezervacijeRezervacijeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijeBindingSource)).BeginInit();
@@ -75,43 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tereniBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ZaposleniciBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tereniToolStripMenuItem,
-            this.članoviToolStripMenuItem,
-            this.slobodniTerminiToolStripMenuItem,
-            this.pregledRezervacijaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(762, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // tereniToolStripMenuItem
-            // 
-            this.tereniToolStripMenuItem.Name = "tereniToolStripMenuItem";
-            this.tereniToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.tereniToolStripMenuItem.Text = "Tereni";
-            // 
-            // članoviToolStripMenuItem
-            // 
-            this.članoviToolStripMenuItem.Name = "članoviToolStripMenuItem";
-            this.članoviToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.članoviToolStripMenuItem.Text = "Članovi";
-            // 
-            // slobodniTerminiToolStripMenuItem
-            // 
-            this.slobodniTerminiToolStripMenuItem.Name = "slobodniTerminiToolStripMenuItem";
-            this.slobodniTerminiToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
-            this.slobodniTerminiToolStripMenuItem.Text = "Slobodni termini";
-            // 
-            // pregledRezervacijaToolStripMenuItem
-            // 
-            this.pregledRezervacijaToolStripMenuItem.Name = "pregledRezervacijaToolStripMenuItem";
-            this.pregledRezervacijaToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
-            this.pregledRezervacijaToolStripMenuItem.Text = "Pregled rezervacija";
             // 
             // dataGridView1
             // 
@@ -269,9 +226,6 @@
             this.lblZaposlenik.TabIndex = 26;
             this.lblZaposlenik.Text = "Zaposlenik:";
             // 
-            // clanoviTableAdapter
-            //  
-            // 
             // rezervacijeTableAdapter
             // 
             this.rezervacijeTableAdapter.ClearBeforeFill = true;
@@ -374,13 +328,9 @@
             this.Controls.Add(this.lblDatum);
             this.Controls.Add(this.lblIme);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmRezervacija";
             this.Text = "Rezervacija";
             this.Load += new System.EventHandler(this.frmRezervacija_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKStavkerezervacijeRezervacijeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijeBindingSource)).EndInit();
@@ -395,10 +345,6 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem tereniToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem članoviToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem slobodniTerminiToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblIme;
         private System.Windows.Forms.Label lblDatum;
@@ -408,7 +354,6 @@
         private System.Windows.Forms.TextBox txtClan;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button btnRezerviraj;
-        private System.Windows.Forms.ToolStripMenuItem pregledRezervacijaToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dateTimeRezervacija;
         private System.Windows.Forms.TextBox txtZaposlenik;
         private System.Windows.Forms.Label lblZaposlenik; 

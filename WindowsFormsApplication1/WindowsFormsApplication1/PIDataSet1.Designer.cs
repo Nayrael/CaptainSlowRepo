@@ -752,10 +752,10 @@ namespace WindowsFormsApplication1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ClanoviRow AddClanoviRow(int id_clan, string ime, string prezime, System.DateTime aktivan_od, byte clanarina_placena, System.DateTime clanarina_placena_do) {
+            public ClanoviRow AddClanoviRow(string ime, string prezime, System.DateTime aktivan_od, byte clanarina_placena, System.DateTime clanarina_placena_do) {
                 ClanoviRow rowClanoviRow = ((ClanoviRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id_clan,
+                        null,
                         ime,
                         prezime,
                         aktivan_od,
@@ -815,6 +815,8 @@ namespace WindowsFormsApplication1 {
                 base.Columns.Add(this.columnclanarina_placena_do);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_clan}, true));
+                this.columnid_clan.AutoIncrement = true;
+                this.columnid_clan.AutoIncrementSeed = 3;
                 this.columnid_clan.AllowDBNull = false;
                 this.columnid_clan.Unique = true;
                 this.columnime.AllowDBNull = false;
@@ -3287,10 +3289,10 @@ namespace WindowsFormsApplication1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ZaposleniciRow AddZaposleniciRow(int id_zaposlenik, string ime, string prezime, string username, string password, byte aktivan, string OIB) {
+            public ZaposleniciRow AddZaposleniciRow(string ime, string prezime, string username, string password, byte aktivan, string OIB) {
                 ZaposleniciRow rowZaposleniciRow = ((ZaposleniciRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id_zaposlenik,
+                        null,
                         ime,
                         prezime,
                         username,
@@ -3354,10 +3356,11 @@ namespace WindowsFormsApplication1 {
                 base.Columns.Add(this.columnOIB);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_zaposlenik}, true));
+                this.columnid_zaposlenik.AutoIncrement = true;
+                this.columnid_zaposlenik.AutoIncrementSeed = 3;
                 this.columnid_zaposlenik.AllowDBNull = false;
                 this.columnid_zaposlenik.Unique = true;
                 this.columnime.MaxLength = 20;
-                this.columnprezime.MaxLength = 20;
                 this.columnusername.MaxLength = 10;
                 this.columnpassword.MaxLength = 10;
                 this.columnOIB.MaxLength = 11;
@@ -8608,12 +8611,19 @@ SELECT id_zaposlenik, ime, prezime, username, password, aktivan, OIB FROM Zaposl
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id_zaposlenik, ime, prezime, username, password, aktivan, OIB FROM dbo.Zap" +
                 "oslenici";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        id_zaposlenik, ime, prezime, username, password, aktivan, OIB\r\nFROM" +
+                "            Zaposlenici\r\nWHERE        (username = @user) AND (password = @pass)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@user", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pass", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8635,6 +8645,54 @@ SELECT id_zaposlenik, ime, prezime, username, password, aktivan, OIB FROM Zaposl
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual PIDataSet1.ZaposleniciDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            PIDataSet1.ZaposleniciDataTable dataTable = new PIDataSet1.ZaposleniciDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByLogin(PIDataSet1.ZaposleniciDataTable dataTable, string user, string pass) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((user == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(user));
+            }
+            if ((pass == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(pass));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual PIDataSet1.ZaposleniciDataTable GetDataByLogin(string user, string pass) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((user == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(user));
+            }
+            if ((pass == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(pass));
+            }
             PIDataSet1.ZaposleniciDataTable dataTable = new PIDataSet1.ZaposleniciDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
