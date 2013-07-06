@@ -13,12 +13,15 @@ namespace WindowsFormsApplication1
     public partial class frmIzvjestaji : Form
     {
         public frmIzvjestaji()
+
         {
-            InitializeComponent();
+                InitializeComponent();
         }
 
         private void frmIzvjestaji_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'PIDataSet1.Tip_terena' table. You can move, or remove it, as needed.
+            this.Tip_terenaTableAdapter.Fill(this.PIDataSet1.Tip_terena);
             // TODO: This line of code loads data into the 'PIDataSet1.Usluge' table. You can move, or remove it, as needed.
             this.UslugeTableAdapter.Fill(this.PIDataSet1.Usluge);
             // TODO: This line of code loads data into the 'PIDataSet1.Tereni' table. You can move, or remove it, as needed.

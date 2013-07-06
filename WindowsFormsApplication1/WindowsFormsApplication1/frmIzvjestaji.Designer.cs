@@ -34,11 +34,13 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ClanoviBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PIDataSet1 = new WindowsFormsApplication1.PIDataSet1();
             this.ZaposleniciBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RezervacijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TereniBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Tip_terenaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.UslugeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -58,11 +60,15 @@
             this.RezervacijeTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.RezervacijeTableAdapter();
             this.TereniTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.TereniTableAdapter();
             this.UslugeTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.UslugeTableAdapter();
+            this.Tip_terenaTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.Tip_terenaTableAdapter();
+            this.dtNOW = new System.Windows.Forms.DateTimePicker();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.ClanoviBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PIDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ZaposleniciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RezervacijeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TereniBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tip_terenaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UslugeBindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -98,6 +104,11 @@
             this.TereniBindingSource.DataMember = "Tereni";
             this.TereniBindingSource.DataSource = this.PIDataSet1;
             // 
+            // Tip_terenaBindingSource
+            // 
+            this.Tip_terenaBindingSource.DataMember = "Tip_terena";
+            this.Tip_terenaBindingSource.DataSource = this.PIDataSet1;
+            // 
             // UslugeBindingSource
             // 
             this.UslugeBindingSource.DataMember = "Usluge";
@@ -111,7 +122,8 @@
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Location = new System.Drawing.Point(12, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(947, 614);
@@ -216,10 +228,10 @@
             // 
             // reportViewer5
             // 
-            reportDataSource5.Name = "IspisUsluga";
-            reportDataSource5.Value = this.UslugeBindingSource;
+            reportDataSource5.Name = "TipTerena";
+            reportDataSource5.Value = this.Tip_terenaBindingSource;
             this.reportViewer5.LocalReport.DataSources.Add(reportDataSource5);
-            this.reportViewer5.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication1.Usluge.rdlc";
+            this.reportViewer5.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication1.TipoviTerena.rdlc";
             this.reportViewer5.Location = new System.Drawing.Point(3, 3);
             this.reportViewer5.Name = "reportViewer5";
             this.reportViewer5.Size = new System.Drawing.Size(933, 582);
@@ -237,6 +249,10 @@
             // 
             // reportViewer6
             // 
+            reportDataSource6.Name = "IspisUsluga";
+            reportDataSource6.Value = this.UslugeBindingSource;
+            this.reportViewer6.LocalReport.DataSources.Add(reportDataSource6);
+            this.reportViewer6.LocalReport.ReportEmbeddedResource = "WindowsFormsApplication1.Usluge.rdlc";
             this.reportViewer6.Location = new System.Drawing.Point(3, 3);
             this.reportViewer6.Name = "reportViewer6";
             this.reportViewer6.Size = new System.Drawing.Size(933, 582);
@@ -262,11 +278,33 @@
             // 
             this.UslugeTableAdapter.ClearBeforeFill = true;
             // 
+            // Tip_terenaTableAdapter
+            // 
+            this.Tip_terenaTableAdapter.ClearBeforeFill = true;
+            // 
+            // dtNOW
+            // 
+            this.dtNOW.Location = new System.Drawing.Point(755, 12);
+            this.dtNOW.Name = "dtNOW";
+            this.dtNOW.Size = new System.Drawing.Size(200, 20);
+            this.dtNOW.TabIndex = 3;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(939, 588);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "REZERVACIJE DANA";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
             // frmIzvjestaji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(996, 638);
+            this.Controls.Add(this.dtNOW);
             this.Controls.Add(this.tabControl1);
             this.Name = "frmIzvjestaji";
             this.Text = "Izvještaji";
@@ -276,6 +314,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ZaposleniciBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RezervacijeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TereniBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tip_terenaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UslugeBindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -314,5 +353,9 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer6;
         private System.Windows.Forms.BindingSource UslugeBindingSource;
         private PIDataSet1TableAdapters.UslugeTableAdapter UslugeTableAdapter;
+        private System.Windows.Forms.BindingSource Tip_terenaBindingSource;
+        private PIDataSet1TableAdapters.Tip_terenaTableAdapter Tip_terenaTableAdapter;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.DateTimePicker dtNOW;
     }
 }
