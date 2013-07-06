@@ -125,7 +125,7 @@
     </Compile>
     <EmbeddedResource Include="IspisClanova.rdlc" />
     <EmbeddedResource Include="IspisZaposlenika.rdlc" />
-    <EmbeddedResource Include="IspisSvihRezervacija.rdlc" />
+    <EmbeddedResource Include="Rezervacije.rdlc" />
     <EmbeddedResource Include="tereni.rdlc" />
     <EmbeddedResource Include="Usluge.rdlc" />
     <EmbeddedResource Include="TipoviTerena.rdlc" />
