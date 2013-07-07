@@ -31,8 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRezervacija));
             this.dataGridStavkeRezervacije = new System.Windows.Forms.DataGridView();
+            this.iduslugaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.uslugeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pIDataSet11 = new WindowsFormsApplication1.PIDataSet1();
+            this.kolicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jedinicnacijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fKStavkerezervacijeRezervacijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rezervacijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pIDataSet1 = new WindowsFormsApplication1.PIDataSet1();
@@ -77,9 +80,6 @@
             this.cmbClan = new System.Windows.Forms.ComboBox();
             this.clanoviBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clanoviTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.ClanoviTableAdapter();
-            this.iduslugaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.kolicinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jedinicnacijenaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStavkeRezervacije)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uslugeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pIDataSet11)).BeginInit();
@@ -109,6 +109,17 @@
             this.dataGridStavkeRezervacije.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridStavkeRezervacije_CellValueChanged);
             this.dataGridStavkeRezervacije.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridStavkeRezervacije_RowValidated);
             // 
+            // iduslugaDataGridViewTextBoxColumn
+            // 
+            this.iduslugaDataGridViewTextBoxColumn.DataPropertyName = "id_usluga";
+            this.iduslugaDataGridViewTextBoxColumn.DataSource = this.uslugeBindingSource;
+            this.iduslugaDataGridViewTextBoxColumn.DisplayMember = "imeUsluge";
+            this.iduslugaDataGridViewTextBoxColumn.HeaderText = "Usluga";
+            this.iduslugaDataGridViewTextBoxColumn.Name = "iduslugaDataGridViewTextBoxColumn";
+            this.iduslugaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.iduslugaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iduslugaDataGridViewTextBoxColumn.ValueMember = "id_usluga";
+            // 
             // uslugeBindingSource
             // 
             this.uslugeBindingSource.DataMember = "Usluge";
@@ -118,6 +129,18 @@
             // 
             this.pIDataSet11.DataSetName = "PIDataSet1";
             this.pIDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kolicinaDataGridViewTextBoxColumn
+            // 
+            this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "kolicina";
+            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "Količina";
+            this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
+            // 
+            // jedinicnacijenaDataGridViewTextBoxColumn
+            // 
+            this.jedinicnacijenaDataGridViewTextBoxColumn.DataPropertyName = "jedinicna_cijena";
+            this.jedinicnacijenaDataGridViewTextBoxColumn.HeaderText = "Jedinična Cijena";
+            this.jedinicnacijenaDataGridViewTextBoxColumn.Name = "jedinicnacijenaDataGridViewTextBoxColumn";
             // 
             // fKStavkerezervacijeRezervacijeBindingSource
             // 
@@ -508,29 +531,6 @@
             // clanoviTableAdapter
             // 
             this.clanoviTableAdapter.ClearBeforeFill = true;
-            // 
-            // iduslugaDataGridViewTextBoxColumn
-            // 
-            this.iduslugaDataGridViewTextBoxColumn.DataPropertyName = "id_usluga";
-            this.iduslugaDataGridViewTextBoxColumn.DataSource = this.uslugeBindingSource;
-            this.iduslugaDataGridViewTextBoxColumn.DisplayMember = "imeUsluge";
-            this.iduslugaDataGridViewTextBoxColumn.HeaderText = "Usluga";
-            this.iduslugaDataGridViewTextBoxColumn.Name = "iduslugaDataGridViewTextBoxColumn";
-            this.iduslugaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.iduslugaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.iduslugaDataGridViewTextBoxColumn.ValueMember = "id_usluga";
-            // 
-            // kolicinaDataGridViewTextBoxColumn
-            // 
-            this.kolicinaDataGridViewTextBoxColumn.DataPropertyName = "kolicina";
-            this.kolicinaDataGridViewTextBoxColumn.HeaderText = "Količina";
-            this.kolicinaDataGridViewTextBoxColumn.Name = "kolicinaDataGridViewTextBoxColumn";
-            // 
-            // jedinicnacijenaDataGridViewTextBoxColumn
-            // 
-            this.jedinicnacijenaDataGridViewTextBoxColumn.DataPropertyName = "jedinicna_cijena";
-            this.jedinicnacijenaDataGridViewTextBoxColumn.HeaderText = "Jedinična Cijena";
-            this.jedinicnacijenaDataGridViewTextBoxColumn.Name = "jedinicnacijenaDataGridViewTextBoxColumn";
             // 
             // frmRezervacija
             // 

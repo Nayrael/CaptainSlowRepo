@@ -132,6 +132,7 @@ namespace WindowsFormsApplication1
             string tempid = this.txtIdRezervacije.Text;
             int tempod = int.Parse(this.cmbOd.SelectedItem.ToString());
             int tempdo = int.Parse(this.cmbDo.SelectedItem.ToString());
+            string tempImePrezime = cmbClan.SelectedItem.ToString();
             this.rezervacijeBindingSource.EndEdit();
             this.fKStavkerezervacijeRezervacijeBindingSource.EndEdit();
             this.rezervacijeTableAdapter.Update(this.pIDataSet1.Rezervacije);
@@ -141,6 +142,7 @@ namespace WindowsFormsApplication1
             trenutniRed[0]["rezervirano"] = 1;
             trenutniRed[0]["trajanje_od"] = tempod;
             trenutniRed[0]["trajanje_do"] = tempdo;
+            trenutniRed[0]["ime_prezime"] = tempImePrezime;
             this.rezervacijeTableAdapter.Update(this.pIDataSet1.Rezervacije);
             this.txtCijenaTerena.Text = "0";
             this.txtClan.ResetText();
