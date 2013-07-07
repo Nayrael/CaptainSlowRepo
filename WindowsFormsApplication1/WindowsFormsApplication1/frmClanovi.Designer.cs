@@ -34,6 +34,7 @@
             this.pIDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pIDataSet1 = new WindowsFormsApplication1.PIDataSet1();
             this.gbRegistracija = new System.Windows.Forms.GroupBox();
+            this.chkclanarina = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.dateClanarina = new System.Windows.Forms.DateTimePicker();
@@ -81,7 +82,6 @@
             this.fkRezervacijeClanovi1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rezervacijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rezervacijeTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.RezervacijeTableAdapter();
-            this.chkclanarina = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.clanoviBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pIDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pIDataSet1)).BeginInit();
@@ -132,6 +132,17 @@
             this.gbRegistracija.TabIndex = 9;
             this.gbRegistracija.TabStop = false;
             this.gbRegistracija.Text = "Podaci:";
+            // 
+            // chkclanarina
+            // 
+            this.chkclanarina.AutoSize = true;
+            this.chkclanarina.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.clanoviBindingSource1, "clanarina_placena", true));
+            this.chkclanarina.Location = new System.Drawing.Point(107, 135);
+            this.chkclanarina.Name = "chkclanarina";
+            this.chkclanarina.Size = new System.Drawing.Size(40, 17);
+            this.chkclanarina.TabIndex = 22;
+            this.chkclanarina.Text = "Da";
+            this.chkclanarina.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -506,17 +517,6 @@
             // rezervacijeTableAdapter
             // 
             this.rezervacijeTableAdapter.ClearBeforeFill = true;
-            // 
-            // chkclanarina
-            // 
-            this.chkclanarina.AutoSize = true;
-            this.chkclanarina.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.clanoviBindingSource1, "clanarina_placena", true));
-            this.chkclanarina.Location = new System.Drawing.Point(107, 135);
-            this.chkclanarina.Name = "chkclanarina";
-            this.chkclanarina.Size = new System.Drawing.Size(40, 17);
-            this.chkclanarina.TabIndex = 22;
-            this.chkclanarina.Text = "Da";
-            this.chkclanarina.UseVisualStyleBackColor = true;
             // 
             // frmClanovi
             // 

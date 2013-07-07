@@ -75,5 +75,27 @@ namespace WindowsFormsApplication1
             izvjestaji.MdiParent = this;
             izvjestaji.Show();
         }
+
+        private void uslugeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsluge usluge = new frmUsluge();
+            usluge.MdiParent = this;
+            usluge.Show();
+        }
+
+        private void tereniToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTeren teren = new frmTeren();
+            teren.MdiParent = this;
+            teren.Show();
+        }
+
+        private void tipTerenaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            frmtipTerena teren = new frmtipTerena();
+            teren.MdiParent = this;
+            teren.Show();
+        }
    }
 }

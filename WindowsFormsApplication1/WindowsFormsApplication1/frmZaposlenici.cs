@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
         private void frmZaposlenici_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'pIDataSet11.Rezervacije' table. You can move, or remove it, as needed.
-            this.rezervacijeTableAdapter.Fill(this.pIDataSet11.Rezervacije);
+            this.rezervacijeTableAdapter.Fill(this.pIDataSet1.Rezervacije);
             // TODO: This line of code loads data into the 'pIDataSet1.Zaposlenici' table. You can move, or remove it, as needed.
             this.zaposleniciTableAdapter.Fill(this.pIDataSet1.Zaposlenici);
 

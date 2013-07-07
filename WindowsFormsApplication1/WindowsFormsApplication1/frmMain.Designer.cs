@@ -35,6 +35,10 @@
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.članoviToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zaposleniciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izmjeneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uslugeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tereniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipTerenaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -50,7 +54,8 @@
             this.korisnikToolStripMenuItem,
             this.pomoćToolStripMenuItem,
             this.članoviToolStripMenuItem,
-            this.zaposleniciToolStripMenuItem});
+            this.zaposleniciToolStripMenuItem,
+            this.izmjeneToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1051, 24);
@@ -98,6 +103,37 @@
             this.zaposleniciToolStripMenuItem.Text = "Zaposlenici";
             this.zaposleniciToolStripMenuItem.Click += new System.EventHandler(this.zaposleniciToolStripMenuItem_Click);
             // 
+            // izmjeneToolStripMenuItem
+            // 
+            this.izmjeneToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uslugeToolStripMenuItem,
+            this.tereniToolStripMenuItem,
+            this.tipTerenaToolStripMenuItem});
+            this.izmjeneToolStripMenuItem.Name = "izmjeneToolStripMenuItem";
+            this.izmjeneToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.izmjeneToolStripMenuItem.Text = "Izmjene";
+            // 
+            // uslugeToolStripMenuItem
+            // 
+            this.uslugeToolStripMenuItem.Name = "uslugeToolStripMenuItem";
+            this.uslugeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.uslugeToolStripMenuItem.Text = "Usluge";
+            this.uslugeToolStripMenuItem.Click += new System.EventHandler(this.uslugeToolStripMenuItem_Click);
+            // 
+            // tereniToolStripMenuItem
+            // 
+            this.tereniToolStripMenuItem.Name = "tereniToolStripMenuItem";
+            this.tereniToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tereniToolStripMenuItem.Text = "Tereni";
+            this.tereniToolStripMenuItem.Click += new System.EventHandler(this.tereniToolStripMenuItem_Click);
+            // 
+            // tipTerenaToolStripMenuItem
+            // 
+            this.tipTerenaToolStripMenuItem.Name = "tipTerenaToolStripMenuItem";
+            this.tipTerenaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tipTerenaToolStripMenuItem.Text = "Tip terena";
+            this.tipTerenaToolStripMenuItem.Click += new System.EventHandler(this.tipTerenaToolStripMenuItem_Click);
+            // 
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
@@ -131,6 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1051, 553);
             this.Controls.Add(this.ssStatus);
             this.Controls.Add(this.menuStrip1);
@@ -163,6 +200,10 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
         private System.Windows.Forms.StatusStrip ssStatus;
+        private System.Windows.Forms.ToolStripMenuItem izmjeneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem uslugeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tereniToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipTerenaToolStripMenuItem;
     }
 }
 

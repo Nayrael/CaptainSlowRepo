@@ -84,6 +84,7 @@
             this.pIDataSet11 = new WindowsFormsApplication1.PIDataSet1();
             this.rezervacijeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rezervacijeTableAdapter = new WindowsFormsApplication1.PIDataSet1TableAdapters.RezervacijeTableAdapter();
+            this.zaposleniciBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gbRegistracija.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.zaposleniciBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pIDataSet1)).BeginInit();
@@ -94,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.fkRezervacijeZaposlenici1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pIDataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposleniciBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbRegistracija
@@ -540,6 +542,11 @@
             // 
             this.rezervacijeTableAdapter.ClearBeforeFill = true;
             // 
+            // zaposleniciBindingSource1
+            // 
+            this.zaposleniciBindingSource1.DataMember = "Zaposlenici";
+            this.zaposleniciBindingSource1.DataSource = this.pIDataSet1;
+            // 
             // frmZaposlenici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -564,6 +571,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.fkRezervacijeZaposlenici1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pIDataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervacijeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zaposleniciBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -625,6 +633,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn terenDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource fkRezervacijeZaposlenici1BindingSource;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.BindingSource zaposleniciBindingSource1;
 
     }
 }

@@ -78,6 +78,18 @@
     <Compile Include="frmRezervacija.Designer.cs">
       <DependentUpon>frmRezervacija.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTeren.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeren.Designer.cs">
+      <DependentUpon>frmTeren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsluge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsluge.Designer.cs">
+      <DependentUpon>frmUsluge.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmZaposlenici.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmtipTerena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmtipTerena.Designer.cs">
+      <DependentUpon>frmtipTerena.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmClanovi.resx">
       <DependentUpon>frmClanovi.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +127,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRezervacija.resx">
       <DependentUpon>frmRezervacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeren.resx">
+      <DependentUpon>frmTeren.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmtipTerena.resx">
+      <DependentUpon>frmtipTerena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsluge.resx">
+      <DependentUpon>frmUsluge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmZaposlenici.resx">
       <DependentUpon>frmZaposlenici.cs</DependentUpon>

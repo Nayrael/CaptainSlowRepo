@@ -30,3 +30,6 @@ C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsF
 C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmZaposlenici.resources
 C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\RdlCompile.cache
 C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\RdlCompile.compiled
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmUsluge.resources
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmTeren.resources
+C:\Users\pepi\Documents\GitHub\CaptainSlowRepo\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmtipTerena.resources
