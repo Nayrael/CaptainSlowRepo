@@ -7,7 +7,7 @@
 <DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="76" ViewPortY="-47" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:Clanovi" ZOrder="13" X="544" Y="21" Height="210" Width="187" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
-    <Shape ID="DesignTable:Rezervacije" ZOrder="12" X="73" Y="-16" Height="210" Width="296" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
+    <Shape ID="DesignTable:Rezervacije" ZOrder="12" X="73" Y="-16" Height="324" Width="296" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
     <Shape ID="DesignTable:Stavke_rezervacije" ZOrder="11" X="213" Y="719" Height="191" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:Tereni" ZOrder="10" X="350" Y="331" Height="134" Width="181" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:Tip_terena" ZOrder="9" X="601" Y="331" Height="115" Width="205" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
@@ -39,7 +39,7 @@
         </Point>
         <Point>
           <X>266</X>
-          <Y>194</Y>
+          <Y>308</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -55,7 +55,7 @@
         </Point>
         <Point>
           <X>125</X>
-          <Y>194</Y>
+          <Y>308</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -63,7 +63,7 @@
       <RoutePoints>
         <Point>
           <X>205</X>
-          <Y>194</Y>
+          <Y>308</Y>
         </Point>
         <Point>
           <X>205</X>

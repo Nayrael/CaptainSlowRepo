@@ -43,6 +43,7 @@
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.ssStatus = new System.Windows.Forms.StatusStrip();
+            this.pregledRezervacijaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.ssStatus.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +66,8 @@
             // datotekaToolStripMenuItem
             // 
             this.datotekaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novaRezervacijaToolStripMenuItem});
+            this.novaRezervacijaToolStripMenuItem,
+            this.pregledRezervacijaToolStripMenuItem});
             this.datotekaToolStripMenuItem.Name = "datotekaToolStripMenuItem";
             this.datotekaToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.datotekaToolStripMenuItem.Text = "Rezervacija";
@@ -73,7 +75,7 @@
             // novaRezervacijaToolStripMenuItem
             // 
             this.novaRezervacijaToolStripMenuItem.Name = "novaRezervacijaToolStripMenuItem";
-            this.novaRezervacijaToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.novaRezervacijaToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.novaRezervacijaToolStripMenuItem.Text = "Nova Rezervacija";
             this.novaRezervacijaToolStripMenuItem.MouseUp += new System.Windows.Forms.MouseEventHandler(this.novaRezervacijaToolStripMenuItem_MouseUp);
             // 
@@ -116,21 +118,21 @@
             // uslugeToolStripMenuItem
             // 
             this.uslugeToolStripMenuItem.Name = "uslugeToolStripMenuItem";
-            this.uslugeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.uslugeToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.uslugeToolStripMenuItem.Text = "Usluge";
             this.uslugeToolStripMenuItem.Click += new System.EventHandler(this.uslugeToolStripMenuItem_Click);
             // 
             // tereniToolStripMenuItem
             // 
             this.tereniToolStripMenuItem.Name = "tereniToolStripMenuItem";
-            this.tereniToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tereniToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.tereniToolStripMenuItem.Text = "Tereni";
             this.tereniToolStripMenuItem.Click += new System.EventHandler(this.tereniToolStripMenuItem_Click);
             // 
             // tipTerenaToolStripMenuItem
             // 
             this.tipTerenaToolStripMenuItem.Name = "tipTerenaToolStripMenuItem";
-            this.tipTerenaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tipTerenaToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.tipTerenaToolStripMenuItem.Text = "Tip terena";
             this.tipTerenaToolStripMenuItem.Click += new System.EventHandler(this.tipTerenaToolStripMenuItem_Click);
             // 
@@ -162,6 +164,13 @@
             this.ssStatus.Size = new System.Drawing.Size(1051, 22);
             this.ssStatus.TabIndex = 6;
             this.ssStatus.Text = "statusStrip1";
+            // 
+            // pregledRezervacijaToolStripMenuItem
+            // 
+            this.pregledRezervacijaToolStripMenuItem.Name = "pregledRezervacijaToolStripMenuItem";
+            this.pregledRezervacijaToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.pregledRezervacijaToolStripMenuItem.Text = "Pregled Rezervacija";
+            this.pregledRezervacijaToolStripMenuItem.Click += new System.EventHandler(this.pregledRezervacijaToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -204,6 +213,7 @@
         private System.Windows.Forms.ToolStripMenuItem uslugeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tereniToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipTerenaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pregledRezervacijaToolStripMenuItem;
     }
 }
 

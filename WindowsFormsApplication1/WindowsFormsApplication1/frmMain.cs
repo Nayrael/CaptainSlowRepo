@@ -97,5 +97,13 @@ namespace WindowsFormsApplication1
             teren.MdiParent = this;
             teren.Show();
         }
+
+        private void pregledRezervacijaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRezervacija frmPregledRezervacije = new frmRezervacija();
+            frmPregledRezervacije.Parametri();
+            frmPregledRezervacije.MdiParent = this;
+            frmPregledRezervacije.Show();
+        }
    }
 }

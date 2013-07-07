@@ -4,9 +4,10 @@
     public partial class PIDataSet1 {
     }
 }
-namespace WindowsFormsApplication1 {
+
+namespace WindowsFormsApplication1.PIDataSet1TableAdapters {
     
     
-    public partial class PIDataSet1 {
+    public partial class RezervacijeTableAdapter {
     }
 }
